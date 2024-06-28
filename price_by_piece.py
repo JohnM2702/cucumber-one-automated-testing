@@ -1,14 +1,9 @@
 # Feature No. 1 Calculate price of products sold by piece
-from prices import priceList
 
-
-def calculate_price_by_piece(product):
-    totalPrice = 0
-
-    if product.lower() in list(priceList.keys()):
-        totalPrice += priceList[product]
+def calculate_price_by_piece(priceList, totalPrice, product):
+    if product.name.lower() in list(priceList.keys()):
+        totalPrice += priceList[product.name].price
+    else:
+        return "Resource Not Found"
 
     return totalPrice
-
-
-# print(calculate_price_by_piece("bag_of_chips"))
