@@ -4,6 +4,6 @@ def calculate_price_by_piece(priceList, totalPrice, product):
     if product.name.lower() in list(priceList.keys()):
         totalPrice += priceList[product.name].price
     else:
-        return "Resource Not Found"
+        return totalPrice
 
     return totalPrice
